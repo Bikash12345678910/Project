@@ -1,0 +1,326 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    background: linear-gradient(
+        -45deg,
+        #ff6ec4,
+        #7873f5,
+        #42e695,
+        #ffb347
+    );
+
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* ===== BACKGROUND ANIMATION ===== */
+@keyframes gradientMove{
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== MAIN CONTAINER ===== */
+.first-div{
+    width: 95%;
+    max-width: 1200px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(15px);
+
+    border: 2px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
+    animation: fadeIn 1s ease;
+}
+
+/* ===== CONTAINER ANIMATION ===== */
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== TITLE ===== */
+.table-title{
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* ===== TABLE ===== */
+.first-table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* ===== TABLE HEADER ===== */
+.table-head{
+    background: linear-gradient(
+        45deg,
+        #ff512f,
+        #dd2476
+    );
+}
+
+.table-head th{
+    padding: 18px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ===== TABLE BODY ===== */
+.first-body{
+    background: rgba(255,255,255,0.08);
+}
+
+/* ===== TABLE ROW ===== */
+.table-body{
+    transition: all 0.4s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.table-body:hover{
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.01);
+}
+
+/* ===== TABLE DATA ===== */
+.table-body td{
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    padding: 10px 20px;
+    margin: 5px;
+
+    border: none;
+    border-radius: 30px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== EDIT BUTTON ===== */
+.btn-edit{
+    background: linear-gradient(
+        45deg,
+        #00b09b,
+        #96c93d
+    );
+}
+
+/* ===== DELETE BUTTON ===== */
+.btn-delete{
+    background: linear-gradient(
+        45deg,
+        #ff416c,
+        #ff4b2b
+    );
+}
+
+/* ===== BUTTON HOVER ===== */
+.btn:hover{
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== BUTTON CLICK ===== */
+.btn:active{
+    transform: scale(0.95);
+}
+
+/* ===== SHINE EFFECT ===== */
+.btn::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.3);
+
+    transition: 0.6s;
+}
+
+.btn:hover::before{
+    left: 100%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px){
+
+    .first-div{
+        overflow-x: auto;
+    }
+
+    .first-table{
+        min-width: 700px;
+    }
+
+    .table-title{
+        font-size: 25px;
+    }
+
+    .btn{
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+/* add button */
+/* BUTTON CONTAINER */
+
+.add-button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px;
+}
+
+
+/* BUTTON STYLE */
+
+.btn-add-records{
+
+    padding: 14px 32px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.2);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* SHINE EFFECT */
+
+.btn-add-records::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.3);
+
+    transform: skewX(-30deg);
+
+    transition: 0.6s;
+}
+
+
+/* HOVER ANIMATION */
+
+.btn-add-records:hover{
+
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.3);
+
+    background: linear-gradient(
+        135deg,
+        #43e97b,
+        #38f9d7
+    );
+}
+
+
+/* SHINE MOVE */
+
+.btn-add-records:hover::before{
+    left: 120%;
+}
+
+
+/* CLICK EFFECT */
+
+.btn-add-records:active{
+    transform: scale(0.95);
+}
